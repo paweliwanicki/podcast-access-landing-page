@@ -1,0 +1,17 @@
+@import "./fonts.scss";
+@import "./default.scss";
+
+
+body {
+    margin: 0;
+    background-color: $blue-dark;
+    height:100%;
+    width:100%;
+    font-family: $font-family;
+}
+
+.content {
+    display:flex;
+    align-items: center;
+    justify-content: end;
+}
