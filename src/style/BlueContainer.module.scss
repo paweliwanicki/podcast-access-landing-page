@@ -1,0 +1,10 @@
+@import './default.scss';
+
+.blueContainer {
+    height:  fit-content;   
+    align-self: flex-end;
+    background-color: $blue-dark;
+    max-width: 725px;
+    padding-top: 5.5em;
+    padding-right:3.6em;
+}

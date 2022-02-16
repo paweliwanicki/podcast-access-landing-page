@@ -16,7 +16,7 @@ const customInput = (props) => {
       />
       <label
         className={[classes.customLabel,validClassName].join(" ")}
-        for={props.id}
+        htmlFor={props.id}
       >
         {props.validationText}
       </label>

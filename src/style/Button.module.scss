@@ -10,6 +10,9 @@ $button-primary-h-color: #B3FFE2;
     line-height: 2em;
     padding:0.7em 2em;
     border: none;
+    cursor: pointer;
+    font-family: 'Chivo Regular', sans-serif;
+    font-weight: 500;
 
     &:hover {
         background-color: $button-primary-h-color;

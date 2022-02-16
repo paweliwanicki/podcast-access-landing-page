@@ -1,0 +1,15 @@
+.formContainer {
+    display:flex;
+    background-color: #2C344B;
+    border-radius: 2em;
+    height:56px;
+    width: fit-content;
+
+    button {
+        flex-grow: 0;
+        align-self: center;
+        margin-right: 5px;
+    }
+
+
+}

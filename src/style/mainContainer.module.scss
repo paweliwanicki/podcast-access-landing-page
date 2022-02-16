@@ -2,14 +2,44 @@
 
     min-width: 320px;
     flex: 1 1 100%;
+    display: flex;
+    position: relative;
+    background-image: url('../images/desktop/image-host.jpg');
+    background-position: top right;
+    background-size: auto;
+    background-repeat: no-repeat;
+
+    .dots {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        transform: translateY(50%);
+        width: 235px;
+        height: auto;
+    }
+
+
+    .greenLightColor {
+        color: #54E6AF;
+    }
+
+    .header {
+        font-size: 3.25rem;
+        font-family: 'Chivo Light', sans-serif;
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: 400;
+        margin-top: 0;
+        margin-bottom: 1.5rem;
+        line-height: 3.85rem;
+    }
 
     @media only screen and (min-width:1275px) {
         margin-top: 130px;
         margin-left: 165px;
-        margin-right:0;
-        height:640px;
-        max-width:1275px;
-     
+        margin-right: 0;
+        height: 640px;
+        max-width: 1275px;
+
     }
 }
-
