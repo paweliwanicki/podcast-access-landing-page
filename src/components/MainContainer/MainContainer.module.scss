@@ -4,20 +4,10 @@
     flex: 1 1 100%;
     display: flex;
     position: relative;
-    background-image: url('../images/desktop/image-host.jpg');
+    background-image: url('../../images/desktop/image-host.jpg');
     background-position: top right;
     background-size: auto;
     background-repeat: no-repeat;
-
-    .dots {
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        transform: translateY(50%);
-        width: 235px;
-        height: auto;
-    }
-
 
     .greenLightColor {
         color: #54E6AF;

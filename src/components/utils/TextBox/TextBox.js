@@ -1,7 +1,7 @@
 import React from 'react';
-import * as classes from '../style/TextBox.module.scss';
+import * as classes from './TextBox.module.scss';
 
-const textBox = props => {
+const TextBox = props => {
   const textColor = props.color;
   return (
     <div className={classes.textBox} >
@@ -12,4 +12,4 @@ const textBox = props => {
   )
 }
 
-export default textBox;
+export default TextBox;

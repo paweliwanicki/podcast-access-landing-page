@@ -1,7 +1,7 @@
 import React from 'react';
-import * as classes from '../style/BlueContainer.module.scss';
+import * as classes from './BlueContainer.module.scss';
 
-const blueContainer = (props) => {
+const BlueContainer = (props) => {
   return (
     <div className={classes.blueContainer}>
       {props.children}
@@ -9,4 +9,4 @@ const blueContainer = (props) => {
   )
 }
 
-export default blueContainer;
+export default BlueContainer;

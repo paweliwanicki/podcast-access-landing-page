@@ -10,6 +10,9 @@ body {
     font-family: $font-family !important; 
 }
 
+@import './default.scss';
+
+
 .content {
     display:flex;
     align-items: center;
@@ -21,6 +24,6 @@ body {
 }
 
 .grayColor {
-    color: #C2CBE5;
+    color: $blue-light;
 }
 

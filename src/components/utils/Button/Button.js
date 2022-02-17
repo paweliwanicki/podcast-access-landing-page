@@ -1,8 +1,8 @@
 import React from "react";
-import * as classes from "../style/Button.module.scss";
+import * as classes from "./Button.module.scss";
 import propTypes from "prop-types";
 
-const button = (props) => {
+const Button = (props) => {
   return (
     <button
       className={classes.customButton}
@@ -12,9 +12,9 @@ const button = (props) => {
   );
 };
 
-button.propTypes = {
+Button.propTypes = {
   type: propTypes.string,
   onClick: propTypes.func,
 };
 
-export default button;
+export default Button;

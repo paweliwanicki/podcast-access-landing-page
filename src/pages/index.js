@@ -1,5 +1,5 @@
 import * as React from "react"
-import MainContainer from '../components/MainContainer';
+import MainContainer from '../components/MainContainer/MainContainer';
 import * as classes from '../style/main.module.scss';
 
 
