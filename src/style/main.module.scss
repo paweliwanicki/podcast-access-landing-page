@@ -3,27 +3,30 @@
 
 
 body {
-    margin: 0;
-    background-color: $blue-dark;
-    height:100%;
-    width:100%;
-    font-family: $font-family !important; 
+  margin: 0;
+  background-color: $blue-dark;
+  height: 100%;
+  width: 100%;
+  font-family: $font-family !important;
 }
 
 @import './default.scss';
 
 
 .content {
-    display:flex;
-    align-items: center;
-    justify-content: end;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+
+  @media only screen and (max-width:470px) {
+    height: 100vh;
+  }
 }
 
 .colorLightGreen {
-    color: $green;
+  color: $green;
 }
 
 .grayColor {
-    color: $blue-light;
+  color: $blue-light;
 }
-

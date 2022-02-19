@@ -20,4 +20,11 @@ $green-color: #54E6AF;
     .gray {
         color: $gray-color;
     }
+
+    @media only screen and (max-width:470px) {
+      font-size: .9rem;
+      line-height: 1.56rem;
+      margin-bottom: 0;
+    }
+
 }

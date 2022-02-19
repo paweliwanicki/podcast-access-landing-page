@@ -10,7 +10,7 @@ const CustomInput = (props) => {
   const onChangehandler = (e) => {
     const value = e.target.value;
     if (value === "") {
-      props.setIsValidated(false);
+      //props.setIsValidated(false);
     }
   };
 

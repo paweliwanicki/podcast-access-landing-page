@@ -8,10 +8,14 @@ const FormContainer = (props) => {
   const [isValidated, setIsValidated] = useState(false);
 
   const validateInput = (e) => {
-    const email = document.querySelector(`#${props.inputID}`).value;
-    if (email.length > 3 && validateEmailAddress(email)) {
+    const value = document.querySelector(`#${props.inputID}`).value;
+    if (value.length > 3 && validateEmailAddress(value)) {
       // include a@x;
       setIsValid(true);
+      setTimeout(() => {
+        setIsValidated(false);
+        clearInput();
+      },1500)
     } else {
       setIsValid(false);
     }
@@ -26,9 +30,14 @@ const FormContainer = (props) => {
       );
   };
 
+  const clearInput = () => {
+    const input = document.querySelector(`#${props.inputID}`);
+    input.value = "";
+  }
+
   const validationsText = {
     error: "Oops! Please check your email",
-    success: "Yea! Email is correct",
+    success: "Yeah! Email is correct, request was sended.",
   };
 
   const btnText = "Request access";
@@ -42,7 +51,6 @@ const FormContainer = (props) => {
         validationsText={validationsText}
         isValid={isValid}
         isValidated={isValidated}
-        setIsValidated={setIsValidated}
       />
       <Button type={`button`} onClick={validateInput} text={btnText} />
       {props.children}

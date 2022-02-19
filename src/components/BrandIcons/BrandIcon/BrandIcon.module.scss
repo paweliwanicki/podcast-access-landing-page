@@ -1,7 +1,16 @@
 .brandIcon {
-     width:auto;
+  width: auto;
+
+  @media only screen and (max-width:590px) {
+    height: 18px;
+  }
+
 }
 
 [data-label="google"] {
-    height:18px;
+  height: 18px;
+
+  @media only screen and (max-width:470px) {
+    height: 11px;
+  }
 }

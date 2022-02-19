@@ -1,40 +1,60 @@
 .inputContainer {
 
-    font-weight: normal;
+  font-weight: 600;
 
-    .customLabel {
-        padding: 0 2em;
-        display: block;
-        line-height: 1em;
-        font-size:.9em;
-        margin-top: .4em;
+  @media only screen and (max-width:470px) {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 1rem;
+  }
 
+  .customLabel {
+    padding: 0 0 0 2em;
+    display: block;
+    line-height: 1em;
+    font-size: .9em;
+    margin-top: .4em;
+  }
 
+  .customInput {
+    width: 350px;
+    max-width: 350px;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+    max-width: 350px;
+    padding: .8em 2em;
+    line-height: 2em;
+    font-size: 1em;
+    color: #fff;
+
+    &::placeholder {
+      color: #b4b2b2;
     }
-    
-    .customInput {
-        width:350px;
-        max-width:350px;
-        background-color: transparent;
-        outline: none;
-        border: none;
-        box-sizing: border-box;
-        max-width:350px;
-        padding: .8em 2em;
-        line-height: 2em;
-        font-size: 1em ;
-        color: #fff;
 
-        &::placeholder {
-            color: #b4b2b2;
-        }
+    @media only screen and (max-width:769px) {
+      max-width: 425px;
     }
+
+    @media only screen and (max-width:590px) {
+      width: auto;
+    }
+
+    @media only screen and (max-width:470px) {
+      width: 100%;
+      background-color: #2C344B;
+      border-radius: 2em;
+      height: 56px;
+      max-width: 100%;
+    }
+  }
 }
 
 .isValid {
-    color: #008000;
+  color: #008000;
 }
 
 .isInvalid {
-    color: #FB3E3E;
+  color: #FB3E3E;
 }

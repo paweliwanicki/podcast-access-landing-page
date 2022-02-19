@@ -1,15 +1,35 @@
 .formContainer {
-    display:flex;
-    background-color: #2C344B;
-    border-radius: 2em;
-    height:56px;
-    width: fit-content;
+  display: flex;
+  background-color: #2C344B;
+  border-radius: 2em;
+  height: 56px;
+  width: fit-content;
 
-    button {
-        flex-grow: 0;
-        align-self: center;
-        margin-right: 5px;
+  @media only screen and (max-width:470px) {
+    width: 100%;
+  }
+
+  button {
+    flex-grow: 0;
+    align-self: center;
+    margin-right: 5px;
+    font-weight: 600;
+    white-space: nowrap;
+
+    @media only screen and (max-width:470px) {
+      width: 100%;
     }
+  }
 
+
+  @media only screen and (max-width:470px) {
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    background-color: transparent;
+    // change grid order
+    order: 4;
+  }
 
 }
