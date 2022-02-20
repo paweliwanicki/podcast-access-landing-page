@@ -1,30 +1,27 @@
-$gray-color: #C2CBE5;
-$green-color: #54E6AF;
-
+@import '../../../style/default.scss';
 
 .textBox {
+  font-size: 1.15em;
+  line-height: 1.75em;
+  max-width: 445px;
+  margin-bottom: 2.5em;
+  color: $white;
 
-    font-size: 1.15em;
-    line-height: 1.75em;
-    max-width: 445px;
-    margin-bottom: 2.5em;
+  p {
+    margin: 0;
+  }
 
-    p {
-        margin: 0;
-    }
+  .green {
+    color: $green;
+  }
 
-    .green {
-        color: $green-color;
-    }
+  .blueLight {
+    color: $blue-light;
+  }
 
-    .gray {
-        color: $gray-color;
-    }
-
-    @media only screen and (max-width:470px) {
-      font-size: .9rem;
-      line-height: 1.56rem;
-      margin-bottom: 0;
-    }
-
+  @media only screen and (max-width:470px) {
+    font-size: .9rem;
+    line-height: 1.56rem;
+    margin-bottom: 0;
+  }
 }

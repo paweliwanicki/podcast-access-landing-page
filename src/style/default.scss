@@ -1,5 +1,4 @@
-
-
+// colors
 $white: #FFF;
 $blue-light: #C2CBE5;
 $blue: #5A668A;
@@ -7,6 +6,12 @@ $blue-middle: #2C344B;
 $blue-dark: #121725;
 $green: #54E6AF;
 
-$font-family: 'Chivo Light', sans-serif;
+// fonts
+$font-family: 'Chivo Light',
+sans-serif;
 
-//@import url('https://fonts.googleapis.com/css2?family=Chivo:wght@300;400;700&display=swap');
+// buttons 
+$button-primary-color: #54E6AF;
+$button-primary-h-color: #B3FFE2;
+$button-primary-disabled-color: #97d6be;
+$button-box-shadow-color: #54e6af33;

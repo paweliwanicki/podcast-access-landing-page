@@ -4,6 +4,17 @@ module.exports = {
         siteUrl: `https://www.yourdomain.tld`,
     },
     plugins: [
-      'gatsby-plugin-sass'
+      'gatsby-plugin-sass',
+      {
+        resolve: `gatsby-plugin-manifest`,
+        options: {
+          name: `GatsbyJS`,
+          short_name: `GatsbyJS`,
+          start_url: `/`,
+          icon: `src/images/icon.png`,
+          display: `standalone`,
+        },
+      },
+      `gatsby-plugin-react-helmet`,
     ]
 }

@@ -1,3 +1,5 @@
+@import '../../style/default.scss';
+
 .mainContainer {
   flex: 1 1 100%;
   display: flex;
@@ -7,42 +9,9 @@
   background-size: auto;
   background-repeat: no-repeat;
 
-  .greenLightColor {
-    color: #54E6AF;
-  }
-
-  .header {
-    font-size: 3.25rem;
-    font-family: 'Chivo Light', sans-serif;
-    color: #fff;
-    text-transform: uppercase;
-    font-weight: 400;
-    margin-top: 0;
-    margin-bottom: 1.5rem;
-    line-height: 3.85rem;
-
-
-    @media only screen and (max-width:769px) {
-      font-size: 3rem;
-      line-height: 3.5rem;
-    }
-
-    @media only screen and (max-width:470px) {
-      font-size: 1.625rem;
-      line-height: 2.375rem;
-    }
-
-  }
-
-  @media only screen and (max-width:769px) {
-    margin-left: 2.5em;
-    background-image: url('../../images/tablet/image-host.jpg');
-  }
-
   @media only screen and (min-width:769px) and (max-width:950px) {
     margin-left: 2em !important;
   }
-
 
   @media only screen and (min-width:769px) {
     margin-top: 130px;
@@ -52,7 +21,6 @@
     max-width: 1275px;
   }
 
-
   @media only screen and (min-width:470px) and (max-width:768px) {
     margin-left: 2.5em;
     background-image: url('../../images/tablet/image-host.jpg');
@@ -60,7 +28,7 @@
 
   @media only screen and (max-width:470px) {
     background-image: url('../../images/mobile/image-host.jpg');
-    background-color: #5A668A;
+    background-color: $blue;
     background-blend-mode: multiply;
     align-items: center;
     align-items: center;

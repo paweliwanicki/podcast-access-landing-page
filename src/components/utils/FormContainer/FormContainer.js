@@ -2,24 +2,42 @@ import React, { useState } from "react";
 import * as classes from "./FormContainer.module.scss";
 import CustomInput from "../CustomInput/CustomInput";
 import Button from "../Button/Button";
+import propTypes from "prop-types";
 
 const FormContainer = (props) => {
   const [isValid, setIsValid] = useState(false);
   const [isValidated, setIsValidated] = useState(false);
+  const [isSending, setIsSending] = useState(false);
+  const [isBtnDisabled, setIsBtnDisabled] = useState(false);
 
   const validateInput = (e) => {
     const value = document.querySelector(`#${props.inputID}`).value;
     if (value.length > 3 && validateEmailAddress(value)) {
       // include a@x;
-      setIsValid(true);
-      setTimeout(() => {
-        setIsValidated(false);
+      setIsBtnDisabled(true);
+      setIsSending(true);
+
+      const myPromise = new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve(value);
+        }, 1300);
+      });
+
+      myPromise.then(() => {
+        setIsValid(true);
         clearInput();
-      },1500)
+        setIsSending(false);
+        setIsBtnDisabled(false);
+        setIsValidated(true);
+
+        setTimeout(() => {
+          setIsValidated(false);
+        }, 1500);
+      });
     } else {
+      setIsValidated(true);
       setIsValid(false);
     }
-    setIsValidated(true);
   };
 
   const validateEmailAddress = (email) => {
@@ -31,9 +49,9 @@ const FormContainer = (props) => {
   };
 
   const clearInput = () => {
-    const input = document.querySelector(`#${props.inputID}`);
+    const input = document.getElementById(props.inputID);
     input.value = "";
-  }
+  };
 
   const validationsText = {
     error: "Oops! Please check your email",
@@ -51,11 +69,23 @@ const FormContainer = (props) => {
         validationsText={validationsText}
         isValid={isValid}
         isValidated={isValidated}
+        isSending={isSending}
+        showLoader={true}
       />
-      <Button type={`button`} onClick={validateInput} text={btnText} />
+      <Button
+        type={`button`}
+        onClick={validateInput}
+        text={btnText}
+        disabled={isBtnDisabled}
+      />
       {props.children}
     </div>
   );
+};
+
+FormContainer.propTypes = {
+  inputID: propTypes.string.isRequired,
+  children: propTypes.node,
 };
 
 export default FormContainer;

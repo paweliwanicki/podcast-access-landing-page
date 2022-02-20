@@ -1,5 +1,6 @@
 import React from 'react';
 import * as classes from './BlueContainer.module.scss';
+import propTypes from 'prop-types';
 
 const BlueContainer = (props) => {
   return (
@@ -7,6 +8,10 @@ const BlueContainer = (props) => {
       {props.children}
     </div>
   )
+}
+
+BlueContainer.propTypes = {
+  children: propTypes.node,
 }
 
 export default BlueContainer;

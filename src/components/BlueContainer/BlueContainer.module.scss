@@ -9,6 +9,9 @@
   padding-top: 5.5em;
   padding-right: 3.6em;
 
+  @media only screen and (min-width: 590px) and (max-width:660px) {
+    margin-right: 1em !important;
+  }
 
   @media only screen and (max-width:768px) {
     margin-top: 16em;
@@ -23,16 +26,10 @@
     margin: 0;
     padding: 0;
     background-color: transparent;
-    // display: flex;
-    // flex-flow: column;
-    // align-items: center;
-    // justify-content: center;
     width: 100%;
     text-align: center;
     display: grid;
     justify-items: center;
     align-items: center;
-
   }
-
 }

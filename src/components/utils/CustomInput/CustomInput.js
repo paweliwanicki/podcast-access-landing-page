@@ -1,19 +1,12 @@
 import React from "react";
 import * as classes from "./CustomInput.module.scss";
-import PropTypes from "prop-types";
+import propTypes from "prop-types";
+import Loader from "../Loader/Loader";
 
 const CustomInput = (props) => {
   const validClassName = props.isValid ? classes.isValid : classes.isInvalid;
   const isValidated = props.isValidated;
   const validKey = props.isValid ? "success" : "error";
-
-  const onChangehandler = (e) => {
-    const value = e.target.value;
-    if (value === "") {
-      //props.setIsValidated(false);
-    }
-  };
-
   const validationText = props.validationsText[validKey];
 
   return (
@@ -25,8 +18,10 @@ const CustomInput = (props) => {
         value={props.value}
         placeholder={props.placeholder}
         ref={props.inputRef}
-        onChange={onChangehandler}
       />
+      {props.isSending && props.showLoader && (
+        <Loader className={classes.customInputLoader} />
+      )}
       {isValidated ? (
         <label
           className={[classes.customLabel, validClassName].join(" ")}
@@ -40,7 +35,11 @@ const CustomInput = (props) => {
 };
 
 CustomInput.propTypes = {
-  type: PropTypes.string,
+  id: propTypes.string.isRequired,
+  type: propTypes.string,
+  value: propTypes.string,
+  placeholder: propTypes.string,
+  ref: propTypes.string,
 };
 
 export default CustomInput;

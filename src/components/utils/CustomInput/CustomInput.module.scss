@@ -1,6 +1,20 @@
 .inputContainer {
 
-  font-weight: 600;
+  position: relative;
+
+  .customInputLoader {
+    position: absolute;
+    right: .3em;
+    top: 1em;
+    width: 26px;
+    height: 26px;
+
+    @media only screen and (max-width:470px) {
+      top: .65em;
+      right: .65em;
+    }
+
+  }
 
   @media only screen and (max-width:470px) {
     width: 100%;
@@ -28,6 +42,8 @@
     line-height: 2em;
     font-size: 1em;
     color: #fff;
+    font-weight: 500;
+    font-family: 'Chivo Regular', sans-serif;
 
     &::placeholder {
       color: #b4b2b2;
@@ -45,7 +61,7 @@
       width: 100%;
       background-color: #2C344B;
       border-radius: 2em;
-      height: 56px;
+      height: 46px;
       max-width: 100%;
     }
   }
