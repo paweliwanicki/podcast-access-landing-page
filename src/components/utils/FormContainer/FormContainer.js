@@ -17,13 +17,14 @@ const FormContainer = (props) => {
       setIsBtnDisabled(true);
       setIsSending(true);
 
-      const myPromise = new Promise((resolve, reject) => {
+      // simulate sending request
+      const request = new Promise((resolve, reject) => {
         setTimeout(() => {
           resolve(value);
         }, 1300);
       });
 
-      myPromise.then(() => {
+      request.then(() => {
         setIsValid(true);
         clearInput();
         setIsSending(false);
