@@ -1,14 +1,14 @@
-@import '../../../style/default.scss';
+@use '../../../style/default.scss';
 
 .formContainer {
   display: flex;
-  background-color: $blue-middle;
+  background-color: default.$blue-middle;
   border-radius: 2em;
   height: 56px;
   width: fit-content;
-  position:relative;
+  position: relative;
 
-  @media only screen and (max-width:470px) {
+  @include default.respond-to(bp-very-small) {
     width: 100%;
   }
 
@@ -19,12 +19,13 @@
     font-weight: 600;
     white-space: nowrap;
 
-    @media only screen and (max-width:470px) {
+    @include default.respond-to(bp-very-small) {
       width: 100%;
     }
+
   }
 
-  @media only screen and (max-width:470px) {
+  @include default.respond-to(bp-very-small) {
     flex-flow: column;
     align-items: center;
     justify-content: center;

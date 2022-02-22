@@ -1,6 +1,6 @@
 import React from "react";
 import * as classes from "./CustomImage.module.scss";
-import propTypes from 'prop-types';
+import propTypes from "prop-types";
 
 const CustomImage = (props) => {
   const className = classes[props.className]

@@ -1,3 +1,5 @@
+@use '../../../style/default.scss';
+
 .brandIcon {
   width: auto;
 
@@ -9,7 +11,8 @@
 .brandIcon[data-label="google"] {
   height: 18px;
 
-  @media only screen and (max-width:470px) {
+  @include default.respond-to(bp-very-small) {
     height: 11px;
   }
+  
 }

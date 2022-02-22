@@ -18,6 +18,8 @@ const CustomInput = (props) => {
         value={props.value}
         placeholder={props.placeholder}
         ref={props.inputRef}
+        onBlur={props.onBlur}
+        onChange={props.onChange}
       />
       {props.isSending && props.showLoader && (
         <Loader className={classes.customInputLoader} />

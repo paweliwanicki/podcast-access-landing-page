@@ -9,10 +9,20 @@ const FormContainer = (props) => {
   const [isValidated, setIsValidated] = useState(false);
   const [isSending, setIsSending] = useState(false);
   const [isBtnDisabled, setIsBtnDisabled] = useState(false);
+  const [inputValue, setInputValue] = useState("");
+  const validationsText = {
+    error: "Oops! Please check your email",
+    success: "Yeah! Email is correct, request was sended.",
+  };
+  const btnText = "Request access";
+
+  const inputOnChangeHandler = (e) => {
+    const value = e.target.value;
+    setInputValue(value);
+  };
 
   const validateInput = (e) => {
-    const value = document.querySelector(`#${props.inputID}`).value;
-    if (value.length > 3 && validateEmailAddress(value)) {
+    if (inputValue.length > 3 && validateEmailAddress(inputValue)) {
       // include a@x;
       setIsBtnDisabled(true);
       setIsSending(true);
@@ -20,17 +30,16 @@ const FormContainer = (props) => {
       // simulate sending request
       const request = new Promise((resolve, reject) => {
         setTimeout(() => {
-          resolve(value);
+          resolve(inputValue);
         }, 1300);
       });
 
       request.then(() => {
         setIsValid(true);
-        clearInput();
+        setInputValue("");
         setIsSending(false);
         setIsBtnDisabled(false);
         setIsValidated(true);
-
         setTimeout(() => {
           setIsValidated(false);
         }, 1500);
@@ -42,24 +51,12 @@ const FormContainer = (props) => {
   };
 
   const validateEmailAddress = (email) => {
-    return String(email)
+    return email
       .toLowerCase()
       .match(
         /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
       );
   };
-
-  const clearInput = () => {
-    const input = document.getElementById(props.inputID);
-    input.value = "";
-  };
-
-  const validationsText = {
-    error: "Oops! Please check your email",
-    success: "Yeah! Email is correct, request was sended.",
-  };
-
-  const btnText = "Request access";
 
   return (
     <div className={classes.formContainer}>
@@ -72,6 +69,8 @@ const FormContainer = (props) => {
         isValidated={isValidated}
         isSending={isSending}
         showLoader={true}
+        value={inputValue}
+        onChange={inputOnChangeHandler}
       />
       <Button
         type={`button`}

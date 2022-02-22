@@ -1,25 +1,25 @@
-@import '../../../style/default.scss';
+@use '../../../style/default.scss';
 
 .textBox {
   font-size: 1.15em;
   line-height: 1.75em;
   max-width: 445px;
   margin-bottom: 2.5em;
-  color: $white;
+  color: default.$white;
 
   p {
     margin: 0;
   }
 
   .green {
-    color: $green;
+    color: default.$green;
   }
 
   .blueLight {
-    color: $blue-light;
+    color: default.$blue-light;
   }
 
-  @media only screen and (max-width:470px) {
+  @include default.respond-to(bp-very-small) {
     font-size: .9rem;
     line-height: 1.56rem;
     margin-bottom: 0;

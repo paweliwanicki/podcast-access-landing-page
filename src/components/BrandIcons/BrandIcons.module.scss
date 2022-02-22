@@ -1,3 +1,5 @@
+@use '../../style/default.scss';
+
 .brandIcons {
   display: flex;
   width: 535px;
@@ -10,7 +12,7 @@
     width: 100%;
   }
 
-  @media only screen and (max-width:470px) {
+  @include default.respond-to(bp-very-small) {
     // change grid order
     order: 3;
     margin-top: 2rem;

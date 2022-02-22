@@ -1,5 +1,6 @@
-.inputContainer {
+@use '../../../style/default.scss';
 
+.inputContainer {
   position: relative;
 
   .customInputLoader {
@@ -9,14 +10,13 @@
     width: 26px;
     height: 26px;
 
-    @media only screen and (max-width:470px) {
+    @include default.respond-to(bp-very-small) {
       top: .65em;
       right: .65em;
     }
-
   }
 
-  @media only screen and (max-width:470px) {
+  @include default.respond-to(bp-very-small) {
     width: 100%;
     max-width: 100%;
     margin-bottom: 1rem;
@@ -41,15 +41,15 @@
     padding: .8em 2em;
     line-height: 2em;
     font-size: 1em;
-    color: #fff;
+    color: default.$white;
     font-weight: 500;
-    font-family: 'Chivo Regular', sans-serif;
+    font-family: default.$font-family-regular;
 
     &::placeholder {
-      color: #b4b2b2;
+      color: default.$input-placeholder-color;
     }
 
-    @media only screen and (max-width:769px) {
+    @include default.respond-to(bp-small) {
       max-width: 425px;
     }
 
@@ -57,9 +57,9 @@
       width: auto;
     }
 
-    @media only screen and (max-width:470px) {
+    @include default.respond-to(bp-very-small) {
       width: 100%;
-      background-color: #2C344B;
+      background-color: default.$blue-middle;
       border-radius: 2em;
       height: 46px;
       max-width: 100%;
@@ -68,9 +68,9 @@
 }
 
 .isValid {
-  color: #008000;
+  color: default.$isValid-color;
 }
 
 .isInvalid {
-  color: #FB3E3E;
+  color: default.$isInvalid-color;
 }
