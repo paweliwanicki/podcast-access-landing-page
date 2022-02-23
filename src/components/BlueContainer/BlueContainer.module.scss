@@ -9,6 +9,16 @@
   padding-top: 5.5em;
   padding-right: 3.6em;
 
+  @include default.respond-to(bp-small) {
+    margin-top: 16.125em;
+    align-self: normal;
+    padding-top: 5.75em;
+    padding-right: 1em;
+    margin-right: 4em;
+    max-width: 635px;
+    margin-bottom: 9.55em;
+  }
+
   @include default.respond-to(bp-very-small) {
     margin: 0;
     padding: 0;
@@ -19,18 +29,4 @@
     justify-items: center;
     align-items: center;
   }
-
-  @include default.respond-to(bp-small) {
-    margin-top: 16em;
-    margin-bottom: 16em;
-    padding-top: 5.75em;
-    padding-right: 1em;
-    margin-right: 4em;
-    max-width: 635px;
-  }
-
-  @media only screen and (min-width: 590px) and (max-width:660px) {
-    margin-right: 1em !important;
-  }
-
 }

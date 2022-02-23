@@ -14,13 +14,14 @@
     color: default.$green;
   }
 
+  @include default.respond-to(bp-small) {
+    font-size: 3rem;
+    line-height: 3.5rem;
+  }
+
   @include default.respond-to(bp-very-small) {
     font-size: 1.625rem;
     line-height: 2.375rem;
   }
 
-  @include default.respond-to(bp-small) {
-    font-size: 3rem;
-    line-height: 3.5rem;
-  }
 }

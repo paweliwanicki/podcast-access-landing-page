@@ -4,14 +4,14 @@
   transform: translateY(-50%);
   position: absolute;
 
-  @include default.respond-to(bp-very-small) {
-    position: static;
-    transform: unset;
-  }
-
   @include default.respond-to(bp-small) {
     transform: unset;
     top: 50px;
+  }
+
+  @include default.respond-to(bp-very-small) {
+    position: static;
+    transform: unset;
   }
 }
 
@@ -23,17 +23,18 @@
   width: 235px;
   height: auto;
 
-  @include default.respond-to(bp-very-small) {
-    display: none;
+  @media only screen and (min-width:48.05em) and (max-width: 51.25em) {
+    width: 190px;
   }
 
   @include default.respond-to(bp-small) {
     left: 0;
     right: auto;
-    transform: unset;
+    transform: translate(-5%, 100%);
   }
 
-  @media only screen and (min-width:769px) and (max-width: 810px) {
-    width: 200px;
+  @include default.respond-to(bp-very-small) {
+    display: none;
   }
+
 }

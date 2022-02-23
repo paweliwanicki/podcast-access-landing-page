@@ -24,8 +24,8 @@ const FormContainer = (props) => {
   const validateInput = (e) => {
     if (inputValue.length > 3 && validateEmailAddress(inputValue)) {
       // include a@x;
-      setIsBtnDisabled(true);
       setIsSending(true);
+      setIsBtnDisabled(true);
 
       // simulate sending request
       const request = new Promise((resolve, reject) => {

@@ -15,10 +15,16 @@
   max-width: 1275px;
 
 
-  @media only screen and (min-width:769px) and (max-width:950px) {
-    margin-left: 2em !important;
+  @media only screen and (min-width:48.05em) and (max-width:59.375em) {
+    margin-left: 2.5em;
   }
 
+  @include default.respond-to(bp-small) {
+    margin-left: 2.5em;
+    background-image: url('../../images/tablet/image-host.jpg');
+    margin-top: 0;
+    height: fit-content;
+  }
 
   @include default.respond-to(bp-very-small) {
     background-image: url('../../images/mobile/image-host.jpg');
@@ -32,14 +38,10 @@
     background-position: center;
     background-size: cover;
     min-height: 640px;
-    height:100vh;
+    height: 100vh;
     padding: 0 1.5rem;
-    height: auto;
     justify-content: space-evenly;
   }
 
-  @include default.respond-to(bp-small) {
-    margin-left: 2.5em;
-    background-image: url('../../images/tablet/image-host.jpg');
-  }
+
 }

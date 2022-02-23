@@ -8,10 +8,6 @@
   width: fit-content;
   position: relative;
 
-  @include default.respond-to(bp-very-small) {
-    width: 100%;
-  }
-
   button {
     flex-grow: 0;
     align-self: center;
@@ -33,6 +29,7 @@
     background-color: transparent;
     // change grid order
     order: 4;
+    width: 100%;
   }
 
 }

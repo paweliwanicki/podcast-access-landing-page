@@ -19,7 +19,7 @@ $button-box-shadow-color: #54e6af33;
 $button-text-color: #121725;
 
 // validation
-$isValid-color: #008000;
+$isValid-color: #7fff00;
 $isInvalid-color: #FB3E3E;
 
 // general input
@@ -32,14 +32,14 @@ $input-placeholder-color: #b4b2b2;
   }
 
   @if $breakpoint == bp-small {
-    @media only screen and (min-width: 30.75em) and (max-width: 48.05em) { @content }; 
+    @media only screen and (max-width: 48.05em) { @content }; 
   }
 
   @if $breakpoint == bp-medium {
-    @media only screen and (min-width: 48.05em) and (max-width: 62.5em) { @content }; 
+    @media only screen and (max-width: 62.5em) { @content }; 
   }
 
   @if $breakpoint == bp-large {
-    @media only screen and (min-width: 62.5em) { @content }; 
+    @media only screen and (max-width: 80.5em) { @content }; 
   }
 }
