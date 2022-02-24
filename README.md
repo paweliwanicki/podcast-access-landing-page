@@ -16,7 +16,9 @@
 </p>
 <p>
   Link to project:
-  ```https://www.frontendmentor.io/challenges/pod-request-access-landing-page-eyTmdkLSG```
+  ```shell
+  https://www.frontendmentor.io/challenges/pod-request-access-landing-page-eyTmdkLSG
+  ```
 <p>
 
 
