@@ -7,7 +7,7 @@
   Podcast request access landing page
 </h1>
 
-[NEWBIE 1] Project from learning path <a href="https://www.frontendmentor.io/challenges" rel="noreferrer"  target="_blank" ref>https://www.frontendmentor.io/challenges</a>.
+[NEWBIE 1] Project from learning path <a href="https://www.frontendmentor.io/challenges" rel="noreferrer"  target="_blank">https://www.frontendmentor.io/challenges</a>.
 <p>
   <h3>Techstack:</h3>
   <p>&bull; GatsbyJS</p>
@@ -16,10 +16,5 @@
 </p>
 <p>
   Link to project:
-  ```shell
-  https://www.frontendmentor.io/challenges/pod-request-access-landing-page-eyTmdkLSG
-  ```
+  <a href="https://www.frontendmentor.io/challenges/pod-request-access-landing-page-eyTmdkLSG" rel="noreferrer"  target="_blank">https://www.frontendmentor.io/challenges/pod-request-access-landing-page-eyTmdkLSG</a>
 <p>
-
-
-
