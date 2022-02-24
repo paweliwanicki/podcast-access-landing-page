@@ -3,6 +3,7 @@ import * as classes from "./FormContainer.module.scss";
 import CustomInput from "../CustomInput/CustomInput";
 import Button from "../Button/Button";
 import propTypes from "prop-types";
+import request from "../../../utils/APIHandler";
 
 const FormContainer = (props) => {
   const [isValid, setIsValid] = useState(false);
@@ -28,13 +29,8 @@ const FormContainer = (props) => {
       setIsBtnDisabled(true);
 
       // simulate sending request
-      const request = new Promise((resolve, reject) => {
-        setTimeout(() => {
-          resolve(inputValue);
-        }, 1300);
-      });
-
-      request.then(() => {
+      const req = request(inputValue);
+      req.then(() => {
         setIsValid(true);
         setInputValue("");
         setIsSending(false);
