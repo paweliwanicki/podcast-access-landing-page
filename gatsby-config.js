@@ -17,4 +17,5 @@ module.exports = {
     },
     `gatsby-plugin-react-helmet`,
   ],
+  pathPrefix: "/podcast-access-landing-page/"
 };
