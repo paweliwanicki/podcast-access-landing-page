@@ -15,6 +15,10 @@
   <p>&bull; sass styles modules</p>
 </p>
 <p>
-  Link to project:
+  Link to my project website:
+  <a href="https://paweliwanicki.github.io/podcast-access-landing-page/" rel="noreferrer"  target="_blank">https://paweliwanicki.github.io/podcast-access-landing-page/</a>
+<p>
+<p>
+  Link to frontend mentor project:
   <a href="https://www.frontendmentor.io/challenges/pod-request-access-landing-page-eyTmdkLSG" rel="noreferrer"  target="_blank">https://www.frontendmentor.io/challenges/pod-request-access-landing-page-eyTmdkLSG</a>
 <p>
