@@ -1,0 +1,25 @@
+@use '../../style/default.scss';
+
+.brandIcons {
+  display: flex;
+  width: 535px;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  margin-top: 4em;
+  align-items: center;
+
+  @media only screen and (max-width:40.95em) {
+    width: auto;
+  }
+
+  @media only screen and (max-width:36.85em) {
+    width: 100%;
+  }
+
+  @include default.respond-to(bp-very-small) {
+    // change grid order
+    order: 3;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+  }
+}
